@@ -5,10 +5,11 @@ import com.a9ae0b01f0ffc.static_string.T_static_string_builder
 
 import java.lang.management.ManagementFactory
 
-class T_card_processing_commons {
+class T_app_commons {
 
     static final Object GC_NULL_OBJ_REF = null
     static final String GC_EMPTY_STRING = ""
+    static final String GC_SPACE = " "
     static final String GC_AT_CHAR = "@"
     static final String GC_COMMA = ","
     static final String GC_COLON = ":"
