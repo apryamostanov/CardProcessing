@@ -48,12 +48,13 @@ class T_app_commons {
     static T_conf GC_CONST_CONF = GC_NULL_OBJ_REF as T_conf
     static String GC_CLASSES_CONF = GC_EMPTY_STRING
     static String GC_BLACK_BOX_CONFIG = GC_EMPTY_STRING
+    static String GC_VSMS_RECON_VERSION = GC_EMPTY_STRING
 
     static void init_custom(String i_conf_file_name) {
-        System.out.println("Init context conf: "+i_conf_file_name)
         GC_CONST_CONF = new T_conf(i_conf_file_name)
         GC_CLASSES_CONF = GC_CONST_CONF.GC_CLASSES_CONF(GC_CLASSES_CONF)
         GC_BLACK_BOX_CONFIG = GC_CONST_CONF.GC_BLACK_BOX_CONFIG(GC_BLACK_BOX_CONFIG)
+        GC_VSMS_RECON_VERSION = GC_CONST_CONF.GC_VSMS_RECON_VERSION(GC_VSMS_RECON_VERSION)
     }
 
 }

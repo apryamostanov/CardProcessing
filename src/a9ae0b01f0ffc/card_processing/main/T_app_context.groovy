@@ -9,10 +9,6 @@ class T_app_context {
     ThreadLocal<T_app_commons> p_commons_thread_local = new ThreadLocal<T_app_commons>()
     ThreadLocal<T_class_loader> p_ioc_thread_local = new ThreadLocal<T_class_loader>()
 
-    void init_default() {
-        init_custom(T_app_commons.GC_CONST_CONF_FILE_NAME)
-    }
-
     void init_custom(String i_conf_file_name) {
         p_commons_thread_local.set(new T_app_commons())
         p_commons_thread_local.get().init_custom(i_conf_file_name)
