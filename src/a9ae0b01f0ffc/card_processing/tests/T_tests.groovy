@@ -10,7 +10,7 @@ import org.junit.Test
 
 class T_tests {
 
-    static final String PC_CONFIG_FILE_NAME = "C:\\Users\\anton\\IdeaProjects\\CardProcessing\\src\\a9ae0b01f0ffc\\card_processing\\conf\\commons.conf"
+    static final String PC_CONFIG_FILE_NAME = "C:\\Users\\anton.pryamostanov\\IdeaProjects\\CardProcessing\\src\\a9ae0b01f0ffc\\card_processing\\conf\\commons.conf"
 
     @Test
     void test_001() {
@@ -49,6 +49,7 @@ class T_tests {
         T_app_context.getInstance().init_custom(PC_CONFIG_FILE_NAME)
         T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
         l_visa_recon_generator.convert_vts_log_to_ctf(T_shortcuts.c().GC_CONST_CONF.GC_VTS_LOG_FILE_NAME, T_shortcuts.c().GC_CONST_CONF.GC_CTF_FILE_NAME)
+        //T_s.l().print_stats()
     }
 
 }

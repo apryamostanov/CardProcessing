@@ -1,20 +1,34 @@
 package a9ae0b01f0ffc.card_processing.implementation
 
 import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
+import com.a9ae0b01f0ffc.black_box.main.T_s
 import groovy.transform.Canonical
 
 import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_EMPTY_STRING
 import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_FALSE
+import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_ZERO
 
 @Canonical
 class T_vts_log_transaction {
 
     LinkedHashMap<String, String> p_vts_log_transaction_name_value_map = new LinkedHashMap<String, String>()
-    Boolean p_is_merged = GC_FALSE
+    Boolean p_is_merged = T_s.c().GC_FALSE
+    Integer p_vts_log_line_number = T_s.c().GC_ZERO
+
+    @I_black_box("error")
+    Integer get_vts_log_line_number() {
+        return p_vts_log_line_number
+    }
+
+    void set_vts_log_line_number(Integer i_vts_log_line_number) {
+        p_vts_log_line_number = i_vts_log_line_number
+    }
 
     @I_black_box("error")
     void add_field(String i_field_name, String i_field_value) {
-        p_vts_log_transaction_name_value_map.put(i_field_name, i_field_value)
+        if (!["{Expected, But Not Received}", "{Received, But Not Expected}"].contains(i_field_value)) {
+            p_vts_log_transaction_name_value_map.put(i_field_name, i_field_value.trim())
+        }
     }
 
     @I_black_box("error")
@@ -22,7 +36,7 @@ class T_vts_log_transaction {
         if (p_vts_log_transaction_name_value_map.containsKey(i_field_name)) {
             return p_vts_log_transaction_name_value_map.get(i_field_name)
         } else {
-            return GC_EMPTY_STRING
+            return T_s.c().GC_EMPTY_STRING
         }
     }
 
@@ -48,7 +62,7 @@ class T_vts_log_transaction {
 
     @I_black_box("error")
     String get_top_mti() {
-        String l_req_resp = GC_EMPTY_STRING
+        String l_req_resp = T_s.c().GC_EMPTY_STRING
         if (get_field("MTI").substring(2, 3) == "0") {
             l_req_resp = "1"
         } else if (get_field("MTI").substring(2, 3) == "1") {
@@ -66,19 +80,4 @@ class T_vts_log_transaction {
         return get_field("F37") + ":" + get_top_mti() + ":" + get_field("F11")
     }
 
-    LinkedHashMap<String, String> get_vts_log_transaction_name_value_map() {
-        return p_vts_log_transaction_name_value_map
-    }
-
-    void set_vts_log_transaction_name_value_map(LinkedHashMap<String, String> i_vts_log_transaction_name_value_map) {
-        p_vts_log_transaction_name_value_map = i_vts_log_transaction_name_value_map
-    }
-
-    Boolean is_merged() {
-        return p_is_merged
-    }
-
-    void set_merged(Boolean i_is_merged) {
-        p_is_merged = i_is_merged
-    }
 }

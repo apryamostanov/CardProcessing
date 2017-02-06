@@ -1,6 +1,5 @@
 package a9ae0b01f0ffc.card_processing.implementation
 
-import a9ae0b01f0ffc.card_processing.main.T_shortcuts
 import com.a9ae0b01f0ffc.black_box.main.T_s
 
 import static a9ae0b01f0ffc.card_processing.main.T_app_commons.*
@@ -14,9 +13,10 @@ class T_vts_log_parser {
     static final String PC_VTS_TO_HOST = "VTS to Host"
     static final Integer PC_VTS_LOG_VALUE_POSITION_SENT = 41
     static final Integer PC_VTS_LOG_VALUE_POSITION_RECEIVED = 66
-    String p_current_direction = GC_EMPTY_STRING
+    static Integer p_current_vts_log_file_line_number = T_s.c().GC_ZERO
+    String p_current_direction = T_s.c().GC_EMPTY_STRING
     ArrayList<T_vts_log_transaction> p_vts_log_transactions = new ArrayList<T_vts_log_transaction>()
-    T_vts_log_transaction p_current_transaction = GC_NULL_OBJ_REF as T_vts_log_transaction
+    T_vts_log_transaction p_current_transaction = T_s.c().GC_NULL_OBJ_REF as T_vts_log_transaction
     HashMap<String, T_vts_log_transaction> p_vts_log_transactions_by_matching_key = new HashMap<String, T_vts_log_transaction>()
     String p_previous_position = PC_OUTSIDE_TRANSACTION_BLOCK
     String p_current_position = PC_OUTSIDE_TRANSACTION_BLOCK
@@ -70,6 +70,7 @@ class T_vts_log_parser {
     @I_black_box
     void initialize_transaction() {
         p_current_transaction = new T_vts_log_transaction()
+        p_current_transaction.set_vts_log_line_number(p_current_vts_log_file_line_number)
     }
 
     @I_black_box
@@ -80,7 +81,7 @@ class T_vts_log_parser {
 
     @I_black_box("error")
     String parse_field_name(String i_line) {
-        return i_line.substring(GC_FIRST_CHAR, i_line.indexOf(GC_SPACE))
+        return i_line.substring(T_s.c().GC_FIRST_CHAR, i_line.indexOf(T_s.c().GC_SPACE))
     }
 
     @I_black_box("error")
@@ -97,7 +98,7 @@ class T_vts_log_parser {
         if (i_line.length() > PC_VTS_LOG_VALUE_POSITION_SENT) {
             return i_line.substring(get_value_position()).trim()
         } else {
-            return GC_EMPTY_STRING
+            return T_s.c().GC_EMPTY_STRING
         }
     }
 
@@ -121,6 +122,7 @@ class T_vts_log_parser {
     @I_black_box
     ArrayList<T_vts_log_transaction> parse_vts_log(String i_vts_log_file_name) {
         new File(i_vts_log_file_name).eachLine { String l_line ->
+            p_current_vts_log_file_line_number ++
             process_line(l_line)
         }
         return p_vts_log_transactions

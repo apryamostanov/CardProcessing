@@ -11,15 +11,6 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../mighty_logger2/out/artifacts/BlackBox.jar/BlackBox.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
           <root url="jar://$MODULE_DIR$/../class_loader/out/artifacts/ioc_jar/ioc.jar!/" />
         </CLASSES>
         <JAVADOC />
@@ -48,6 +39,15 @@
       <library>
         <CLASSES>
           <root url="jar://$MODULE_DIR$/../mighty_config/out/artifacts/jar/configuration_utility.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Black-Box/out/artifacts/BlackBox.jar/BlackBox.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
