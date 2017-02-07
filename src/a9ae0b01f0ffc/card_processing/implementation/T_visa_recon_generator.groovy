@@ -1,7 +1,5 @@
 package a9ae0b01f0ffc.card_processing.implementation
 
-import a9ae0b01f0ffc.card_processing.main.T_app_context
-import a9ae0b01f0ffc.card_processing.main.T_shortcuts
 import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
 import com.a9ae0b01f0ffc.black_box.implementation.destinations.T_destination_file
 import com.a9ae0b01f0ffc.black_box.main.T_s
@@ -138,13 +136,6 @@ class T_visa_recon_generator {
         write_line(l_v22xxx_formatter.make_v22900_string(p_line_number, p_total_record_count))
         write_line(l_v22xxx_formatter.make_tc91_string(p_number_of_tcrs + 1, p_number_of_transactions + 1))
         write_line(l_v22xxx_formatter.make_tc92_string(p_number_of_tcrs + 1, p_number_of_transactions + 1))
-    }
-
-    @I_black_box
-    public static void main(String... i_args) {
-        T_app_context.getInstance().init_custom(i_args[0])
-        T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
-        l_visa_recon_generator.convert_vts_log_to_ctf(T_shortcuts.c().GC_CONST_CONF.GC_VTS_LOG_FILE_NAME, T_shortcuts.c().GC_CONST_CONF.GC_CTF_FILE_NAME)
     }
 
 }

@@ -1,4 +1,1 @@
-amounts/currencies validation
-non-merged transactions
-cobol number signs
-F2 validate
+Merge clearings and validate duplicate clearing keys

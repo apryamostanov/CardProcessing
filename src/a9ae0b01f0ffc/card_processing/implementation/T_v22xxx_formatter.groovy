@@ -285,7 +285,7 @@ class T_v22xxx_formatter {
         l_result_string += i_merged_vts_log_transaction.get_field("F37").padRight(12, " ")
         //p_retrieval_reference_number
         l_result_string += i_merged_vts_log_transaction.get_field("F11").padRight(6, " ") //p_trace_number
-        l_result_string += i_merged_vts_log_transaction.get_field("H10").padRight(4, " ") //p_batch_number
+        l_result_string += i_merged_vts_log_transaction.get_field("H10").padLeft(4, "0") //p_batch_number
         l_result_string += i_merged_vts_log_transaction.get_req().get_field("MTI").padRight(4, " ")
         //p_request_message_type
         l_result_string += i_merged_vts_log_transaction.get_field("F39").padRight(2, " ") //p_response_code
