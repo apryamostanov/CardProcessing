@@ -37,4 +37,5 @@ class T_merged_vts_log_transaction {
         return T_s.nvl(T_s.nvl(p_req.get_field(i_field_name), p_resp.get_field(i_field_name)), T_s.c().GC_EMPTY_STRING)
     }
 
+
 }
