@@ -1,9 +1,8 @@
-package a9ae0b01f0ffc.card_processing.implementation
+package com.a9ae0b01f0ffc.card_processing.implementation
 
 import com.a9ae0b01f0ffc.black_box.main.T_s
-
-import static a9ae0b01f0ffc.card_processing.main.T_app_commons.*
 import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
+import com.a9ae0b01f0ffc.card_processing.main.T_app_const
 
 class T_vts_log_parser {
 
@@ -13,10 +12,10 @@ class T_vts_log_parser {
     static final String PC_VTS_TO_HOST = "VTS to Host"
     static final Integer PC_VTS_LOG_VALUE_POSITION_SENT = 41
     static final Integer PC_VTS_LOG_VALUE_POSITION_RECEIVED = 66
-    static Integer p_current_vts_log_file_line_number = T_s.c().GC_ZERO
-    String p_current_direction = T_s.c().GC_EMPTY_STRING
+    static Integer p_current_vts_log_file_line_number = T_app_const.GC_ZERO
+    String p_current_direction = T_app_const.GC_EMPTY_STRING
     ArrayList<T_vts_log_transaction> p_vts_log_transactions = new ArrayList<T_vts_log_transaction>()
-    T_vts_log_transaction p_current_transaction = T_s.c().GC_NULL_OBJ_REF as T_vts_log_transaction
+    T_vts_log_transaction p_current_transaction = T_app_const.GC_NULL_OBJ_REF as T_vts_log_transaction
     HashMap<String, T_vts_log_transaction> p_vts_log_transactions_by_matching_key = new HashMap<String, T_vts_log_transaction>()
     String p_previous_position = PC_OUTSIDE_TRANSACTION_BLOCK
     String p_current_position = PC_OUTSIDE_TRANSACTION_BLOCK
@@ -53,7 +52,7 @@ class T_vts_log_parser {
 
     @I_black_box("error")
     Boolean entered_transaction_block() {
-        //T_s.l().log_debug(T_s.s().FLAGS, T_s.r(p_current_position, "p_current_position"), T_s.r(p_previous_position, "p_previous_position"))
+        //T_app_s.l().log_debug(T_app_s.s().FLAGS, T_app_s.r(p_current_position, "p_current_position"), T_app_s.r(p_previous_position, "p_previous_position"))
         return p_current_position == PC_INSIDE_TRANSACTION_BLOCK && p_previous_position == PC_OUTSIDE_TRANSACTION_BLOCK
     }
 
@@ -81,7 +80,7 @@ class T_vts_log_parser {
 
     @I_black_box("error")
     String parse_field_name(String i_line) {
-        return i_line.substring(T_s.c().GC_FIRST_CHAR, i_line.indexOf(T_s.c().GC_SPACE))
+        return i_line.substring(T_app_const.GC_FIRST_CHAR, i_line.indexOf(T_app_const.GC_SPACE))
     }
 
     @I_black_box("error")
@@ -98,7 +97,7 @@ class T_vts_log_parser {
         if (i_line.length() > PC_VTS_LOG_VALUE_POSITION_SENT) {
             return i_line.substring(get_value_position()).trim()
         } else {
-            return T_s.c().GC_EMPTY_STRING
+            return T_app_const.GC_EMPTY_STRING
         }
     }
 

@@ -1,19 +1,21 @@
-package a9ae0b01f0ffc.card_processing.implementation
+package com.a9ae0b01f0ffc.card_processing.implementation
 
+import com.a9ae0b01f0ffc.black_box.main.T_u
+import com.a9ae0b01f0ffc.card_processing.main.T_app_const
 import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
 import com.a9ae0b01f0ffc.black_box.implementation.destinations.T_destination_file
 import com.a9ae0b01f0ffc.black_box.main.T_s
 
-import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_VSMS_RECON_VERSION
+import static com.a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_VSMS_RECON_VERSION
 
 
 class T_visa_recon_generator {
 
-    static FileWriter p_file_writer = T_s.c().GC_NULL_OBJ_REF as FileWriter
-    Integer p_number_of_tcrs = T_s.c().GC_ZERO
-    Integer p_number_of_transactions = T_s.c().GC_ZERO
-    Integer p_total_record_count = T_s.c().GC_ZERO
-    Integer p_line_number = T_s.c().GC_ONE_CHAR
+    static FileWriter p_file_writer = T_app_const.GC_NULL_OBJ_REF as FileWriter
+    Integer p_number_of_tcrs = T_app_const.GC_ZERO
+    Integer p_number_of_transactions = T_app_const.GC_ZERO
+    Integer p_total_record_count = T_app_const.GC_ZERO
+    Integer p_line_number = T_app_const.GC_ONE_CHAR
 
     @I_black_box
     void write_line(String i_line) {
@@ -74,39 +76,39 @@ class T_visa_recon_generator {
 
     @I_black_box
     void validate_merged_transaction(T_merged_vts_log_transaction i_merged_vts_log_transaction) {
-        if (i_merged_vts_log_transaction.get_field("F2") == T_s.c().GC_EMPTY_STRING) {
+        if (i_merged_vts_log_transaction.get_field("F2") == T_app_const.GC_EMPTY_STRING) {
             T_s.l().log_warning(T_s.s().Card_number_F002_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
         }
         if (i_merged_vts_log_transaction.get_req().get_mti_message_class() == "02") {
-            if (i_merged_vts_log_transaction.get_field("F4") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F4") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F004_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F5") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F5") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F005_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F6") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F6") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F006_is_missing_for_Clearing_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F49") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F49") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F049_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F50") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F50") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F050_is_missing_for_Clearing_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F51") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F51") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F051_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
         } else {
-            if (i_merged_vts_log_transaction.get_field("F4") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F4") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F004_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F6") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F6") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F006_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F49") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F49") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F049_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
-            if (i_merged_vts_log_transaction.get_field("F51") == T_s.c().GC_EMPTY_STRING) {
+            if (i_merged_vts_log_transaction.get_field("F51") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F051_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
         }
@@ -117,7 +119,7 @@ class T_visa_recon_generator {
         T_s.l().log_info(T_s.s().Welcome_to_Visa_VIP_Full_Service_Recon_File_Generator)
         T_s.l().log_info(T_s.s().This_tool_converts_VTS_log_file_to_CTF_TC33_V222xx_reports)
         T_s.l().log_info(T_s.s().Version_Z1, GC_VSMS_RECON_VERSION)
-        p_file_writer = new FileWriter(new File(T_destination_file.process_location(i_ctf_file_name)))
+        p_file_writer = T_u.init_file(i_ctf_file_name)
         T_vts_log_parser l_vts_log_parser = new T_vts_log_parser()
         ArrayList<T_vts_log_transaction> l_vts_log_transactions = l_vts_log_parser.parse_vts_log(i_vts_log_file_name)
         ArrayList<T_merged_vts_log_transaction> l_merged_vts_log_transactions = merge_vts_log_transactions(l_vts_log_transactions)

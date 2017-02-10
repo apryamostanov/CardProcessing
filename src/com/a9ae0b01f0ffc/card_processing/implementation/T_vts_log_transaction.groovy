@@ -1,19 +1,17 @@
-package a9ae0b01f0ffc.card_processing.implementation
+package com.a9ae0b01f0ffc.card_processing.implementation
 
 import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
 import com.a9ae0b01f0ffc.black_box.main.T_s
+import com.a9ae0b01f0ffc.card_processing.main.T_app_const
 import groovy.transform.Canonical
 
-import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_EMPTY_STRING
-import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_FALSE
-import static a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_ZERO
 
 @Canonical
 class T_vts_log_transaction {
 
     LinkedHashMap<String, String> p_vts_log_transaction_name_value_map = new LinkedHashMap<String, String>()
-    Boolean p_is_merged = T_s.c().GC_FALSE
-    Integer p_vts_log_line_number = T_s.c().GC_ZERO
+    Boolean p_is_merged = T_app_const.GC_FALSE
+    Integer p_vts_log_line_number = T_app_const.GC_ZERO
 
     @I_black_box("error")
     Integer get_vts_log_line_number() {
@@ -36,7 +34,7 @@ class T_vts_log_transaction {
         if (p_vts_log_transaction_name_value_map.containsKey(i_field_name)) {
             return p_vts_log_transaction_name_value_map.get(i_field_name)
         } else {
-            return T_s.c().GC_EMPTY_STRING
+            return T_app_const.GC_EMPTY_STRING
         }
     }
 
@@ -62,7 +60,7 @@ class T_vts_log_transaction {
 
     @I_black_box("error")
     String get_top_mti() {
-        String l_req_resp = T_s.c().GC_EMPTY_STRING
+        String l_req_resp = T_app_const.GC_EMPTY_STRING
         if (get_field("MTI").substring(2, 3) == "0") {
             l_req_resp = "1"
         } else if (get_field("MTI").substring(2, 3) == "1") {
