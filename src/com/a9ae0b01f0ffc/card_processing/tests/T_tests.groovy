@@ -46,10 +46,12 @@ class T_tests {
 
     @Test
     void test_006() {
+        com.a9ae0b01f0ffc.black_box_base.main.T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_debug/logger_commons.conf")
         T_app_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
         T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
         l_visa_recon_generator.convert_vts_log_to_ctf(T_app_s.c().GC_VTS_LOG_FILE, T_app_s.c().GC_CTF_FILE)
-        //T_app_s.l().print_stats()
+        T_s.l().print_stats()
+        com.a9ae0b01f0ffc.black_box_base.main.T_s.l().print_stats()
     }
 
 }
