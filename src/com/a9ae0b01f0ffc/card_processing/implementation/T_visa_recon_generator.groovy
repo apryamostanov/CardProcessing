@@ -15,7 +15,7 @@ class T_visa_recon_generator {
     Integer p_total_record_count = T_app_const.GC_ZERO
     Integer p_line_number = T_app_const.GC_ONE_CHAR
 
-    @I_black_box
+    @I_black_box("error")
     void write_line(String i_line) {
         p_file_writer.write(i_line + System.lineSeparator())
         p_file_writer.flush()
@@ -24,7 +24,7 @@ class T_visa_recon_generator {
         p_number_of_transactions++
     }
 
-    @I_black_box
+    @I_black_box("error")
     T_merged_vts_log_transaction merge(T_vts_log_transaction i_vts_log_transaction_one, T_vts_log_transaction i_vts_log_transaction_two) {
         if (i_vts_log_transaction_one.get_mti_message_class() != i_vts_log_transaction_two.get_mti_message_class()) {
             T_s.l().log_warning(T_s.s().MTI_message_class_mismatch, i_vts_log_transaction_one.get_field("MTI"), i_vts_log_transaction_two.get_field("MTI"))
@@ -72,7 +72,7 @@ class T_visa_recon_generator {
         return l_merged_vts_log_transactions
     }
 
-    @I_black_box
+    @I_black_box("error")
     void validate_merged_transaction(T_merged_vts_log_transaction i_merged_vts_log_transaction) {
         if (i_merged_vts_log_transaction.get_field("F2") == T_app_const.GC_EMPTY_STRING) {
             T_s.l().log_warning(T_s.s().Card_number_F002_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())

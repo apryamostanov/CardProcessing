@@ -75,7 +75,7 @@ class T_vts_log_parser {
     @I_black_box("error")
     void finalize_transaction() {
         p_vts_log_transactions.add(p_current_transaction)
-        T_s.l().log_debug(T_s.s().Transaction_created, T_s.t(p_current_transaction, T_s.s().p_current_transaction))
+        //T_s.l().log_debug(T_s.s().Transaction_created, T_s.t(p_current_transaction, T_s.s().p_current_transaction))
     }
 
     @I_black_box("error")

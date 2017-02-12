@@ -11,7 +11,7 @@ class T_merged_vts_log_transaction {
     T_vts_log_transaction p_req = T_app_const.GC_NULL_OBJ_REF as T_vts_log_transaction
     T_vts_log_transaction p_resp = T_app_const.GC_NULL_OBJ_REF as T_vts_log_transaction
 
-    @I_black_box
+    @I_black_box("error")
     T_vts_log_transaction get_req() {
         return p_req
     }

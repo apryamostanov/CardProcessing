@@ -8,7 +8,7 @@ import java.text.DecimalFormat
 
 class T_v22xxx_formatter {
 
-    @I_black_box
+    @I_black_box("error")
     String make_tc91_string(Integer i_total_number_of_tcrs, Integer i_total_number_of_transactions) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "91" //p_transaction_code
@@ -32,7 +32,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_tc92_string(Integer i_total_number_of_tcrs, Integer i_total_number_of_transactions) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "92" //p_transaction_code
@@ -56,7 +56,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22900_string(Integer i_line_number, Integer i_total_record_count) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -73,7 +73,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22000_string(Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -91,7 +91,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22261_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -115,7 +115,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22260_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -150,7 +150,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22230_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -162,7 +162,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22220_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -204,7 +204,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22210_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
@@ -257,7 +257,7 @@ class T_v22xxx_formatter {
         return l_result_string
     }
 
-    @I_black_box
+    @I_black_box("error")
     String make_v22200_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
         l_result_string += "3300"
