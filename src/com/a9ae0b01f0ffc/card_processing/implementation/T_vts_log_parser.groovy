@@ -1,7 +1,7 @@
 package com.a9ae0b01f0ffc.card_processing.implementation
 
+import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
 import com.a9ae0b01f0ffc.black_box.main.T_s
-import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
 import com.a9ae0b01f0ffc.card_processing.main.T_app_const
 
 class T_vts_log_parser {
@@ -30,7 +30,7 @@ class T_vts_log_parser {
         return i_line.contains("--------") && p_current_position == PC_INSIDE_TRANSACTION_BLOCK
     }
 
-    @I_black_box
+    @I_black_box("error")
     Boolean is_vts_to_host(String i_line) {
         return !i_line.contains("EXPECTED VALUE")
     }
@@ -66,13 +66,13 @@ class T_vts_log_parser {
         return p_current_position == PC_INSIDE_TRANSACTION_BLOCK && p_previous_position == PC_INSIDE_TRANSACTION_BLOCK
     }
 
-    @I_black_box
+    @I_black_box("error")
     void initialize_transaction() {
         p_current_transaction = new T_vts_log_transaction()
         p_current_transaction.set_vts_log_line_number(p_current_vts_log_file_line_number)
     }
 
-    @I_black_box
+    @I_black_box("error")
     void finalize_transaction() {
         p_vts_log_transactions.add(p_current_transaction)
         T_s.l().log_debug(T_s.s().Transaction_created, T_s.t(p_current_transaction, T_s.s().p_current_transaction))
@@ -118,7 +118,7 @@ class T_vts_log_parser {
         }
     }
 
-    @I_black_box
+    @I_black_box("error")
     ArrayList<T_vts_log_transaction> parse_vts_log(String i_vts_log_file_name) {
         new File(i_vts_log_file_name).eachLine { String l_line ->
             p_current_vts_log_file_line_number ++

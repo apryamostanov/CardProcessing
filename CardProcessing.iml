@@ -20,7 +20,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../mighty_logger2/out/artifacts/BlackBox.jar/BlackBox.jar!/" />
+          <root url="jar://C:/COMPILE/BlackBoxBase.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -29,7 +29,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://C:/COMPILE/BlackBoxBase.jar!/" />
+          <root url="jar://$MODULE_DIR$/../mighty_logger2/out/artifacts/BlackBox/BlackBox.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

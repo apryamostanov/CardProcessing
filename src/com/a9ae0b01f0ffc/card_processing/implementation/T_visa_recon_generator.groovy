@@ -1,13 +1,11 @@
 package com.a9ae0b01f0ffc.card_processing.implementation
 
+import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
+import com.a9ae0b01f0ffc.black_box.main.T_s
 import com.a9ae0b01f0ffc.black_box.main.T_u
 import com.a9ae0b01f0ffc.card_processing.main.T_app_const
-import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
-import com.a9ae0b01f0ffc.black_box.implementation.destinations.T_destination_file
-import com.a9ae0b01f0ffc.black_box.main.T_s
 
 import static com.a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_VSMS_RECON_VERSION
-
 
 class T_visa_recon_generator {
 
@@ -48,7 +46,7 @@ class T_visa_recon_generator {
         return l_merged_vts_log_transaction
     }
 
-    @I_black_box
+    @I_black_box("error")
     ArrayList<T_merged_vts_log_transaction> merge_vts_log_transactions(ArrayList<T_vts_log_transaction> i_all_unmerged_vts_log_transactions) {
         ArrayList<T_merged_vts_log_transaction> l_merged_vts_log_transactions = new ArrayList<T_merged_vts_log_transaction>()
         HashMap<String, T_vts_log_transaction> l_unmerged_transaction_by_key = new HashMap<String, T_vts_log_transaction>()

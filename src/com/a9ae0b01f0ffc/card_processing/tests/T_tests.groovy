@@ -6,6 +6,7 @@ import com.a9ae0b01f0ffc.card_processing.implementation.T_vts_log_parser
 import com.a9ae0b01f0ffc.card_processing.main.T_app_const
 import com.a9ae0b01f0ffc.card_processing.main.T_app_context
 import com.a9ae0b01f0ffc.card_processing.main.T_app_s
+import com.a9ae0b01f0ffc.card_processing.main.T_u
 import org.junit.Test
 
 class T_tests {
@@ -47,11 +48,21 @@ class T_tests {
     @Test
     void test_006() {
         com.a9ae0b01f0ffc.black_box_base.main.T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_debug/logger_commons.conf")
+        T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_commons.conf")
         T_app_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
         T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
         l_visa_recon_generator.convert_vts_log_to_ctf(T_app_s.c().GC_VTS_LOG_FILE, T_app_s.c().GC_CTF_FILE)
+        //com.a9ae0b01f0ffc.black_box_base.main.T_s.l().print_stats()
         T_s.l().print_stats()
-        com.a9ae0b01f0ffc.black_box_base.main.T_s.l().print_stats()
+    }
+
+    @Test
+    void test_007() {
+        com.a9ae0b01f0ffc.black_box_base.main.T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_debug/logger_commons.conf")
+        //T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_commons.conf")
+        System.out.println(T_u.format_cobol_number("0000000000000"))
+        //com.a9ae0b01f0ffc.black_box_base.main.T_s.l().print_stats()
+        //T_s.l().print_stats()
     }
 
 }

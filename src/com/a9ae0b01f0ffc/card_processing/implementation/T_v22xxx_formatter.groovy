@@ -1,8 +1,8 @@
 package com.a9ae0b01f0ffc.card_processing.implementation
 
+import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
 import com.a9ae0b01f0ffc.card_processing.main.T_app_const
 import com.a9ae0b01f0ffc.card_processing.main.T_u
-import com.a9ae0b01f0ffc.black_box.implementation.annotations.I_black_box
 
 import java.text.DecimalFormat
 
