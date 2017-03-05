@@ -16,4 +16,8 @@ class T_app_s {
         return T_app_const.GC_STATIC_STRING_BUILDER
     }
 
+    static T_trxn_config t() {
+        return x().get_trxn_config()
+    }
+
 }

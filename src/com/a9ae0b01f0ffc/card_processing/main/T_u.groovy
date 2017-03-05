@@ -28,4 +28,22 @@ class T_u extends T_common_utils{
         return l_result
     }
 
+    @I_black_box("error")
+    static String adjust_decdigits_V22260(String i_amount, String i_currency) {
+        int l_currency_found
+        int l_adjusted_amount = i_amount.toInteger()
+
+        if (i_currency == T_app_const.GC_EMPTY_STRING) {
+            return i_amount
+        }
+
+        l_currency_found = T_trxn_config.GC_CURRENCY_DECDIGITS_0.indexOf(i_currency)
+        if (l_currency_found >= 0) l_adjusted_amount *= 100
+
+        l_currency_found = T_trxn_config.GC_CURRENCY_DECDIGITS_3.indexOf(i_currency)
+        if (l_currency_found >= 0) l_adjusted_amount /= 10
+
+        return l_adjusted_amount.toString()
+    }
+
 }

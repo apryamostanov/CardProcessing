@@ -118,6 +118,7 @@ class T_v22xxx_formatter {
     @I_black_box("error")
     String make_v22260_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
+        String l_adjusted_amount
         l_result_string += "3300"
         l_result_string += i_merged_vts_log_transaction.get_field("F2").padLeft(6, "0").substring(0, 6) //BIN
         l_result_string += "400082SMSRAWDATA"
@@ -125,13 +126,16 @@ class T_v22xxx_formatter {
         l_result_string += "V22260" //p_record_type
         l_result_string += T_u.s2d(i_merged_vts_log_transaction.get_field("F15"), "MMdd").format("yy").substring(T_app_const.GC_ONE_CHAR) + T_u.s2d(i_merged_vts_log_transaction.get_field("F15"), "MMdd").format("D").padLeft(3, "0")
         //p_rate_table_date
-        l_result_string += T_u.format_cobol_number(i_merged_vts_log_transaction.get_field("F4")).padLeft(12, "0")
+        l_adjusted_amount = T_u.adjust_decdigits_V22260(i_merged_vts_log_transaction.get_field("F4"), i_merged_vts_log_transaction.get_field("F49"))
+        l_result_string += T_u.format_cobol_number(l_adjusted_amount).padLeft(12, "0")
         //p_transaction_amount
         l_result_string += i_merged_vts_log_transaction.get_field("F49").padRight(3, " ") //p_transaction_currency_code
-        l_result_string += T_u.format_cobol_number(i_merged_vts_log_transaction.get_field("F5")).padLeft(12, "0").padLeft(12, "0")
+        l_adjusted_amount = T_u.adjust_decdigits_V22260(i_merged_vts_log_transaction.get_field("F5"), i_merged_vts_log_transaction.get_field("F50"))
+        l_result_string += T_u.format_cobol_number(l_adjusted_amount).padLeft(12, "0")
         //p_settlement_amount
         l_result_string += i_merged_vts_log_transaction.get_field("F50").padRight(3, " ") //p_settlement_currency_code
-        l_result_string += T_u.format_cobol_number(i_merged_vts_log_transaction.get_field("F6")).padLeft(12, "0").padLeft(12, "0")
+        l_adjusted_amount = T_u.adjust_decdigits_V22260(i_merged_vts_log_transaction.get_field("F6"), i_merged_vts_log_transaction.get_field("F51"))
+        l_result_string += T_u.format_cobol_number(l_adjusted_amount).padLeft(12, "0")
         //p_cardholder_billing_amount
         l_result_string += i_merged_vts_log_transaction.get_field("F51").padRight(3, " ")
         //p_cardholder_billing_currency_code
