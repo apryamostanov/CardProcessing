@@ -1,17 +1,16 @@
-package com.a9ae0b01f0ffc.card_processing.tests
+package com.a9ae0b01f0ffc.VSMSGEN.tests
 
 import com.a9ae0b01f0ffc.black_box.main.T_s
-import com.a9ae0b01f0ffc.card_processing.implementation.T_visa_recon_generator
-import com.a9ae0b01f0ffc.card_processing.implementation.T_vts_log_parser
-import com.a9ae0b01f0ffc.card_processing.main.T_app_const
-import com.a9ae0b01f0ffc.card_processing.main.T_app_context
-import com.a9ae0b01f0ffc.card_processing.main.T_app_s
-import com.a9ae0b01f0ffc.card_processing.main.T_u
+import com.a9ae0b01f0ffc.VSMSGEN.implementation.T_visa_recon_generator
+import com.a9ae0b01f0ffc.VSMSGEN.implementation.T_vts_log_parser
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_const
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_context
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_s
 import org.junit.Test
 
 class T_tests {
 
-    static final String PC_CONFIG_FILE_NAME =  "./src/com/a9ae0b01f0ffc/card_processing/conf/commons.conf"
+    static final String PC_CONFIG_FILE_NAME =  "./src/com/a9ae0b01f0ffc/VSMSGEN/conf/commons.conf"
 
     @Test
     void test_001() {
@@ -35,7 +34,7 @@ class T_tests {
     void test_004() {
         T_app_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
         T_vts_log_parser l_vts_log_parser = new T_vts_log_parser()
-        l_vts_log_parser.parse_vts_log("C:\\Users\\anton\\IdeaProjects\\CardProcessing\\src\\com.a9ae0b01f0ffc\\card_processing\\tests\\data\\vts.log")
+        l_vts_log_parser.parse_vts_log("C:\\Users\\anton\\IdeaProjects\\CardProcessing\\src\\com.a9ae0b01f0ffc\\VSMSGEN\\tests\\data\\vts.log")
     }
 
     @Test
@@ -47,8 +46,8 @@ class T_tests {
 
     @Test
     void test_006() {
-        //com.a9ae0b01f0ffc.black_box_base.main.T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_debug/logger_commons.conf")
-        T_s.x().init_custom("./src/com/a9ae0b01f0ffc/card_processing/conf/logger_commons.conf")
+        //com.a9ae0b01f0ffc.black_box_base.main.T_s.x().init_custom("./src/com/a9ae0b01f0ffc/VSMSGEN/conf/logger_debug/logger_commons.conf")
+        T_s.x().init_custom("./src/com/a9ae0b01f0ffc/VSMSGEN/conf/logger_commons.conf")
         T_app_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
         T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
         l_visa_recon_generator.convert_vts_log_to_ctf(T_app_s.c().GC_VTS_LOG_FILE, T_app_s.c().GC_CTF_FILE)

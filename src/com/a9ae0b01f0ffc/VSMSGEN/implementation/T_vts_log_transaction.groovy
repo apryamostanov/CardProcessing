@@ -1,7 +1,7 @@
-package com.a9ae0b01f0ffc.card_processing.implementation
+package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
-import com.a9ae0b01f0ffc.card_processing.main.T_app_const
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_const
 import groovy.transform.Canonical
 
 

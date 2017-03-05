@@ -1,6 +1,6 @@
-package com.a9ae0b01f0ffc.card_processing.main
+package com.a9ae0b01f0ffc.VSMSGEN.main
 
-import com.a9ae0b01f0ffc.card_processing.implementation.T_visa_recon_generator
+import com.a9ae0b01f0ffc.VSMSGEN.implementation.T_visa_recon_generator
 
 class T_main {
 

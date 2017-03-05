@@ -1,11 +1,11 @@
-package com.a9ae0b01f0ffc.card_processing.implementation
+package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
 import com.a9ae0b01f0ffc.black_box.main.T_s
 import com.a9ae0b01f0ffc.black_box.main.T_u
-import com.a9ae0b01f0ffc.card_processing.main.T_app_const
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_const
 
-import static com.a9ae0b01f0ffc.card_processing.main.T_app_commons.GC_VSMS_RECON_VERSION
+import static com.a9ae0b01f0ffc.VSMSGEN.main.T_app_commons.GC_VSMS_RECON_VERSION
 
 class T_visa_recon_generator {
 
@@ -109,6 +109,9 @@ class T_visa_recon_generator {
             if (i_merged_vts_log_transaction.get_field("F51") == T_app_const.GC_EMPTY_STRING) {
                 T_s.l().log_warning(T_s.s().F051_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
             }
+        }
+        if (i_merged_vts_log_transaction.get_field("F62.2") == T_app_const.GC_EMPTY_STRING) {
+            T_s.l().log_warning(T_s.s().F062_2_Transaction_Id_is_missing_for_transaction_with_RRN_Z1_with_request_at_line_Z2_and_response_at_line_Z3, i_merged_vts_log_transaction.get_field("F37"), i_merged_vts_log_transaction.get_req().get_vts_log_line_number(), i_merged_vts_log_transaction.get_resp().get_vts_log_line_number())
         }
     }
 

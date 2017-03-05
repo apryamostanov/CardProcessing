@@ -1,4 +1,4 @@
-package com.a9ae0b01f0ffc.card_processing.main
+package com.a9ae0b01f0ffc.VSMSGEN.main
 
 import com.a9ae0b01f0ffc.commons.static_string.T_static_string_builder
 
