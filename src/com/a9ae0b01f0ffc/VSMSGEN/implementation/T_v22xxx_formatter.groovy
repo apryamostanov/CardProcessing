@@ -94,13 +94,15 @@ class T_v22xxx_formatter {
     @I_black_box("error")
     String make_v22261_string(T_merged_vts_log_transaction i_merged_vts_log_transaction, Integer i_line_number) {
         String l_result_string = T_app_const.GC_EMPTY_STRING
+        String l_adjusted_amount
         l_result_string += "3300"
         l_result_string += i_merged_vts_log_transaction.get_field("F2").padLeft(6, "0").substring(0, 6) //BIN
         l_result_string += "400082SMSRAWDATA"
         l_result_string += String.valueOf(i_line_number).padLeft(8, "0")
         l_result_string += "V22261" //p_record_type
+        l_adjusted_amount = T_u.adjust_decdigits_V22260(i_merged_vts_log_transaction.get_field("F5"), i_merged_vts_log_transaction.get_field("F50"))
         if (i_merged_vts_log_transaction.get_field("F5") != T_app_const.GC_EMPTY_STRING) {
-            l_result_string += (new DecimalFormat(".000000").format(Integer.valueOf(i_merged_vts_log_transaction.get_field("F5")) * 0.016 / 100)).replace(T_app_const.GC_POINT, T_app_const.GC_EMPTY_STRING).padLeft(11, "0")
+            l_result_string += (new DecimalFormat(".000000").format(Integer.valueOf(l_adjusted_amount) * 0.016 / 100)).replace(T_app_const.GC_POINT, T_app_const.GC_EMPTY_STRING).padLeft(11, "0")
             //p_reimbursement_fee
             l_result_string += "C".padRight(1, " ") //p_reimbursement_fee_debit_credit_indicator
         } else {
