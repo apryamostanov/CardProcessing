@@ -1,10 +1,11 @@
 package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
-import com.a9ae0b01f0ffc.black_box.main.T_s
-import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_const
+import groovy.transform.ToString
 
-class T_vts_log_parser {
+@ToString(includeNames = true, includeFields = true, includeSuper = false)
+class T_vts_log_parser  extends T_vsms_base_6_util {
 
     static final String PC_INSIDE_TRANSACTION_BLOCK = "Inside transaction block"
     static final String PC_OUTSIDE_TRANSACTION_BLOCK = "Outside transaction block"
@@ -12,16 +13,15 @@ class T_vts_log_parser {
     static final String PC_VTS_TO_HOST = "VTS to Host"
     static final Integer PC_VTS_LOG_VALUE_POSITION_SENT = 41
     static final Integer PC_VTS_LOG_VALUE_POSITION_RECEIVED = 66
-    static Integer p_current_vts_log_file_line_number = T_app_const.GC_ZERO
-    String p_current_direction = T_app_const.GC_EMPTY_STRING
+    static Integer p_current_vts_log_file_line_number = GC_ZERO
+    String p_current_direction = GC_EMPTY_STRING
     ArrayList<T_vts_log_transaction> p_vts_log_transactions = new ArrayList<T_vts_log_transaction>()
-    T_vts_log_transaction p_current_transaction = T_app_const.GC_NULL_OBJ_REF as T_vts_log_transaction
-    HashMap<String, T_vts_log_transaction> p_vts_log_transactions_by_matching_key = new HashMap<String, T_vts_log_transaction>()
+    T_vts_log_transaction p_current_transaction = GC_NULL_OBJ_REF as T_vts_log_transaction
     String p_previous_position = PC_OUTSIDE_TRANSACTION_BLOCK
     String p_current_position = PC_OUTSIDE_TRANSACTION_BLOCK
 
     @I_black_box("error")
-    Boolean is_block_starting_line(String i_line) {
+    static Boolean is_block_starting_line(String i_line) {
         return i_line.contains("FLD ID")
     }
 
@@ -31,7 +31,7 @@ class T_vts_log_parser {
     }
 
     @I_black_box("error")
-    Boolean is_vts_to_host(String i_line) {
+    static Boolean is_vts_to_host(String i_line) {
         return !i_line.contains("EXPECTED VALUE")
     }
 
@@ -66,9 +66,16 @@ class T_vts_log_parser {
         return p_current_position == PC_INSIDE_TRANSACTION_BLOCK && p_previous_position == PC_INSIDE_TRANSACTION_BLOCK
     }
 
-    @I_black_box("error")
+    //@I_black_box("error")
     void initialize_transaction() {
-        p_current_transaction = new T_vts_log_transaction()
+        /*def l_shortcuts = new com.a9ae0b01f0ffc.black_box.main.T_logging_base_6_util()
+        def l_logger = l_shortcuts.l()
+        try {*/
+            p_current_transaction = new T_vts_log_transaction()
+        /*} catch (Throwable e) {
+            l_logger.log_error(e)
+            throw(e)
+        }*/
         p_current_transaction.set_vts_log_line_number(p_current_vts_log_file_line_number)
     }
 
@@ -79,8 +86,8 @@ class T_vts_log_parser {
     }
 
     @I_black_box("error")
-    String parse_field_name(String i_line) {
-        return i_line.substring(T_app_const.GC_FIRST_CHAR, i_line.indexOf(T_app_const.GC_SPACE))
+    static String parse_field_name(String i_line) {
+        return i_line.substring(GC_FIRST_CHAR, i_line.indexOf(GC_SPACE))
     }
 
     @I_black_box("error")
@@ -97,7 +104,7 @@ class T_vts_log_parser {
         if (i_line.length() > PC_VTS_LOG_VALUE_POSITION_SENT) {
             return i_line.substring(get_value_position()).trim()
         } else {
-            return T_app_const.GC_EMPTY_STRING
+            return GC_EMPTY_STRING
         }
     }
 

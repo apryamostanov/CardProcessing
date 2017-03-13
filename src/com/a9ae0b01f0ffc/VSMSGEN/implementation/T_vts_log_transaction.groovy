@@ -1,16 +1,14 @@
 package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
-import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_const
-import groovy.transform.Canonical
+import groovy.transform.ToString
 
-
-@Canonical
-class T_vts_log_transaction {
+@ToString(includeNames = true, includeFields = true, includeSuper = false)
+class T_vts_log_transaction extends T_vsms_base_6_util{
 
     LinkedHashMap<String, String> p_vts_log_transaction_name_value_map = new LinkedHashMap<String, String>()
-    Boolean p_is_merged = T_app_const.GC_FALSE
-    Integer p_vts_log_line_number = T_app_const.GC_ZERO
+    Integer p_vts_log_line_number = GC_ZERO
 
     @I_black_box("error")
     Integer get_vts_log_line_number() {
@@ -34,7 +32,7 @@ class T_vts_log_transaction {
         if (p_vts_log_transaction_name_value_map.containsKey(i_field_name)) {
             return p_vts_log_transaction_name_value_map.get(i_field_name)
         } else {
-            return T_app_const.GC_EMPTY_STRING
+            return GC_EMPTY_STRING
         }
     }
 
@@ -60,7 +58,7 @@ class T_vts_log_transaction {
 
     @I_black_box("error")
     String get_top_mti() {
-        String l_req_resp = T_app_const.GC_EMPTY_STRING
+        String l_req_resp = GC_EMPTY_STRING
         if (get_field("MTI").substring(2, 3) == "0") {
             l_req_resp = "1"
         } else if (get_field("MTI").substring(2, 3) == "1") {

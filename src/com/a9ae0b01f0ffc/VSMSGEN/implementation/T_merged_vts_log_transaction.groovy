@@ -1,15 +1,15 @@
 package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
-import com.a9ae0b01f0ffc.VSMSGEN.main.T_app_const
-import com.a9ae0b01f0ffc.VSMSGEN.main.T_u
 import groovy.transform.Canonical
+import groovy.transform.ToString
 
-@Canonical
-class T_merged_vts_log_transaction {
+@ToString(includeNames = true, includeFields = true, includeSuper = false)
+class T_merged_vts_log_transaction  extends T_vsms_base_6_util{
 
-    T_vts_log_transaction p_req = T_app_const.GC_NULL_OBJ_REF as T_vts_log_transaction
-    T_vts_log_transaction p_resp = T_app_const.GC_NULL_OBJ_REF as T_vts_log_transaction
+    T_vts_log_transaction p_req = GC_NULL_OBJ_REF as T_vts_log_transaction
+    T_vts_log_transaction p_resp = GC_NULL_OBJ_REF as T_vts_log_transaction
 
     @I_black_box("error")
     T_vts_log_transaction get_req() {
@@ -33,7 +33,7 @@ class T_merged_vts_log_transaction {
 
     @I_black_box("error")
     String get_field(String i_field_name) {
-        return T_u.coalesce(p_req.get_field(i_field_name), p_resp.get_field(i_field_name), T_app_const.GC_EMPTY_STRING)
+        return coalesce(p_req.get_field(i_field_name), p_resp.get_field(i_field_name), GC_EMPTY_STRING)
     }
 
 
