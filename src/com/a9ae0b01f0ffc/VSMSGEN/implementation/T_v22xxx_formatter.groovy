@@ -2,11 +2,13 @@ package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
+import com.a9ae0b01f0ffc.black_box.annotations.I_fix_variable_scopes
 import groovy.transform.ToString
 
 import java.text.DecimalFormat
 
 @ToString(includeNames = true, includeFields = true, includeSuper = false)
+@I_fix_variable_scopes
 class T_v22xxx_formatter  extends T_vsms_base_6_util {
 
     @I_black_box("error")

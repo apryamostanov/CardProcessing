@@ -2,9 +2,11 @@ package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
+import com.a9ae0b01f0ffc.black_box.annotations.I_fix_variable_scopes
 import groovy.transform.ToString
 
 @ToString(includeNames = true, includeFields = true, includeSuper = false)
+@I_fix_variable_scopes
 class T_vts_log_transaction extends T_vsms_base_6_util{
 
     LinkedHashMap<String, String> p_vts_log_transaction_name_value_map = new LinkedHashMap<String, String>()

@@ -2,12 +2,14 @@ package com.a9ae0b01f0ffc.VSMSGEN.implementation
 
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
+import com.a9ae0b01f0ffc.black_box.annotations.I_fix_variable_scopes
 import groovy.transform.ToString
 
 import static com.a9ae0b01f0ffc.VSMSGEN.conf.T_vsms_conf.GC_VSMS_RECON_VERSION
 
 @ToString(includeNames = true, includeFields = true, includeSuper = false)
-class T_visa_recon_generator  extends T_vsms_base_6_util {
+@I_fix_variable_scopes
+class T_visa_recon_generator extends T_vsms_base_6_util {
 
     static FileWriter p_file_writer = GC_NULL_OBJ_REF as FileWriter
     Integer p_number_of_tcrs = GC_ZERO
@@ -15,7 +17,7 @@ class T_visa_recon_generator  extends T_vsms_base_6_util {
     Integer p_total_record_count = GC_ZERO
     Integer p_line_number = GC_ONE_CHAR
 
-    @I_black_box("error")
+    @I_black_box
     void write_line(String i_line) {
         p_file_writer.write(i_line + System.lineSeparator())
         p_file_writer.flush()
@@ -66,7 +68,7 @@ class T_visa_recon_generator  extends T_vsms_base_6_util {
         }
         for (T_vts_log_transaction l_non_merged_transaction in i_all_unmerged_vts_log_transactions) {
             if (!l_merged_transaction_by_key.containsKey(l_non_merged_transaction.get_match_key())) {
-                l().log_warning(s.Z1_with_RRN_Z2_at_line_Z3_does_not_have_a_Z4_in_VTS_log, l_non_merged_transaction.is_request()?"Request":"Response", l_non_merged_transaction.get_field("F37"), l_non_merged_transaction.get_vts_log_line_number(), l_non_merged_transaction.is_request()?"Response":"Request")
+                l().log_warning(s.Z1_with_RRN_Z2_at_line_Z3_does_not_have_a_Z4_in_VTS_log, l_non_merged_transaction.is_request() ? "Request" : "Response", l_non_merged_transaction.get_field("F37"), l_non_merged_transaction.get_vts_log_line_number(), l_non_merged_transaction.is_request() ? "Response" : "Request")
             }
         }
         return l_merged_vts_log_transactions
