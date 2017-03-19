@@ -1,13 +1,13 @@
 package com.a9ae0b01f0ffc.VSMSGEN.main
 
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
-import com.a9ae0b01f0ffc.black_box.interfaces.I_logger
+import com.a9ae0b01f0ffc.black_box.implementation.T_logger
 import com.a9ae0b01f0ffc.black_box.main.T_logging_base_5_context
 
 class T_vsms_base_6_util extends T_vsms_base_5_context{
 
     @I_black_box("error")
-    static I_logger l() {
+    static T_logger l() {
         return T_logging_base_5_context.l()
     }
 

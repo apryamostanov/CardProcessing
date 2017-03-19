@@ -49,7 +49,7 @@ class T_tests {
         T_vsms_base_5_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
         T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
         l_visa_recon_generator.convert_vts_log_to_ctf(T_vsms_base_7_main.c().GC_VTS_LOG_FILE, T_vsms_base_7_main.c().GC_CTF_FILE)
-        //T_logging_base_6_util.l().print_stats()
+        T_logging_base_6_util.l().print_stats()
     }
 
 }
