@@ -54,7 +54,6 @@ class T_vts_log_parser  extends T_vsms_base_6_util {
 
     @I_black_box("error")
     Boolean entered_transaction_block() {
-        //T_app_s.l().log_debug(T_app_s.s().FLAGS, T_app_s.r(p_current_position, "p_current_position"), T_app_s.r(p_previous_position, "p_previous_position"))
         return p_current_position == PC_INSIDE_TRANSACTION_BLOCK && p_previous_position == PC_OUTSIDE_TRANSACTION_BLOCK
     }
 
@@ -68,23 +67,15 @@ class T_vts_log_parser  extends T_vsms_base_6_util {
         return p_current_position == PC_INSIDE_TRANSACTION_BLOCK && p_previous_position == PC_INSIDE_TRANSACTION_BLOCK
     }
 
-    //@I_black_box("error")
+    @I_black_box("error")
     void initialize_transaction() {
-        /*def l_shortcuts = new com.a9ae0b01f0ffc.black_box.main.T_logging_base_6_util()
-        def l_logger = l_shortcuts.l()
-        try {*/
-            p_current_transaction = new T_vts_log_transaction()
-        /*} catch (Throwable e) {
-            l_logger.log_error(e)
-            throw(e)
-        }*/
+        p_current_transaction = new T_vts_log_transaction()
         p_current_transaction.set_vts_log_line_number(p_current_vts_log_file_line_number)
     }
 
     @I_black_box("error")
     void finalize_transaction() {
         p_vts_log_transactions.add(p_current_transaction)
-        //T_s.l().log_debug(T_s.s().Transaction_created, T_s.t(p_current_transaction, T_s.s().p_current_transaction))
     }
 
     @I_black_box("error")

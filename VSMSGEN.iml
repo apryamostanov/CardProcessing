@@ -11,7 +11,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Commons/out/artifacts/Commons_jar/Commons.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Black-Box/out/artifacts/BlackBox/BlackBox.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -20,7 +20,7 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../Black-Box/out/artifacts/BlackBox/BlackBox.jar!/" />
+          <root url="jar://$MODULE_DIR$/../Commons/out/artifacts/Commons_jar/Commons.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
