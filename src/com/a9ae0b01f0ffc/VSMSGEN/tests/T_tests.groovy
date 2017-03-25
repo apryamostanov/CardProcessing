@@ -4,6 +4,7 @@ import com.a9ae0b01f0ffc.VSMSGEN.implementation.T_visa_recon_generator
 import com.a9ae0b01f0ffc.VSMSGEN.implementation.T_vts_log_parser
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_4_const
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_5_context
+import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_7_main
 import com.a9ae0b01f0ffc.black_box.main.T_logging_base_6_util
 import org.junit.Test
@@ -49,6 +50,8 @@ class T_tests {
         T_vsms_base_5_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
         T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
         l_visa_recon_generator.convert_vts_log_to_ctf(T_vsms_base_7_main.c().GC_VTS_LOG_FILE, T_vsms_base_7_main.c().GC_CTF_FILE)
+        T_vsms_base_6_util.l().log_info(T_vsms_base_6_util.s.Process_is_complete)
+        T_vsms_base_6_util.l().flush()
         //T_logging_base_6_util.l().print_stats()
     }
 

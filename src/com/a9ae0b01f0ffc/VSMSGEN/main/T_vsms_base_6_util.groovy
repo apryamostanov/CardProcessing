@@ -1,13 +1,13 @@
 package com.a9ae0b01f0ffc.VSMSGEN.main
 
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
-import com.a9ae0b01f0ffc.black_box.interfaces.I_logger
+import com.a9ae0b01f0ffc.black_box.implementation.T_logger
 import com.a9ae0b01f0ffc.black_box.main.T_logging_base_5_context
 
 class T_vsms_base_6_util extends T_vsms_base_5_context{
 
     @I_black_box("error")
-    static I_logger l() {
+    static T_logger l() {
         return T_logging_base_5_context.l()
     }
 
@@ -42,9 +42,9 @@ class T_vsms_base_6_util extends T_vsms_base_5_context{
         Integer l_currency_found
         Integer l_adjusted_amount = new Integer(i_amount)
         l_currency_found = c().GC_CURRENCY_DECDIGITS_0.indexOf(i_currency)
-        if (l_currency_found >= 0) l_adjusted_amount *= 100
+        if (l_currency_found >= GC_ZERO) l_adjusted_amount *= 100
         l_currency_found = c().GC_CURRENCY_DECDIGITS_3.indexOf(i_currency)
-        if (l_currency_found >= 0) l_adjusted_amount /= 10
+        if (l_currency_found >= GC_ZERO) l_adjusted_amount /= 10
         return l_adjusted_amount.toString()
     }
 
