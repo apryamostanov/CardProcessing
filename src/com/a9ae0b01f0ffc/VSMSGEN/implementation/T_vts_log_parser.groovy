@@ -17,8 +17,8 @@ class T_vts_log_parser  extends T_vsms_base_6_util {
     static final Integer PC_VTS_LOG_VALUE_POSITION_RECEIVED = 66
     static Integer p_current_vts_log_file_line_number = GC_ZERO
     String p_current_direction = GC_EMPTY_STRING
-    ArrayList<T_vts_log_transaction> p_vts_log_transactions = new ArrayList<T_vts_log_transaction>()
-    T_vts_log_transaction p_current_transaction = GC_NULL_OBJ_REF as T_vts_log_transaction
+    ArrayList<T_sim_log_transaction> p_log_transactions = new ArrayList<T_sim_log_transaction>()
+    T_sim_log_transaction p_current_transaction = GC_NULL_OBJ_REF as T_sim_log_transaction
     String p_previous_position = PC_OUTSIDE_TRANSACTION_BLOCK
     String p_current_position = PC_OUTSIDE_TRANSACTION_BLOCK
 
@@ -69,18 +69,27 @@ class T_vts_log_parser  extends T_vsms_base_6_util {
 
     @I_black_box("error")
     void initialize_transaction() {
-        p_current_transaction = new T_vts_log_transaction()
-        p_current_transaction.set_vts_log_line_number(p_current_vts_log_file_line_number)
+        p_current_transaction = new T_sim_log_transaction()
+        p_current_transaction.set_log_line_number(p_current_vts_log_file_line_number)
     }
 
     @I_black_box("error")
     void finalize_transaction() {
-        p_vts_log_transactions.add(p_current_transaction)
+        p_log_transactions.add(p_current_transaction)
     }
 
     @I_black_box("error")
     static String parse_field_name(String i_line) {
-        return i_line.substring(GC_FIRST_CHAR, i_line.indexOf(GC_SPACE))
+        String l_field_name = i_line.substring(GC_FIRST_CHAR, i_line.indexOf(GC_SPACE))
+        /* Change MTI to F000 */
+        if (l_field_name == "MTI")
+            return "F000"
+
+        /* No changes in header subfields*/
+        if (l_field_name.substring(0, 1) == "H")
+            return l_field_name
+
+        return normalize_field_naming(l_field_name)
     }
 
     @I_black_box("error")
@@ -103,7 +112,12 @@ class T_vts_log_parser  extends T_vsms_base_6_util {
 
     @I_black_box("error")
     void accrue_fields(String i_line) {
-        p_current_transaction.add_field(parse_field_name(i_line), parse_field_value(i_line))
+        String l_field_name = parse_field_name(i_line)
+        String l_field_value = parse_field_value(i_line)
+
+        if (!["{Expected, But Not Received}", "{Received, But Not Expected}"].contains(l_field_value)) {
+            p_current_transaction.add_field(l_field_name, l_field_value)
+        }
     }
 
     @I_black_box("error")
@@ -119,12 +133,12 @@ class T_vts_log_parser  extends T_vsms_base_6_util {
     }
 
     @I_black_box("error")
-    ArrayList<T_vts_log_transaction> parse_vts_log(String i_vts_log_file_name) {
-        new File(i_vts_log_file_name).eachLine { String l_line ->
+    ArrayList<T_sim_log_transaction> parse_log(String i_log_file_name) {
+        new File(i_log_file_name).eachLine { String l_line ->
             p_current_vts_log_file_line_number ++
             process_line(l_line)
         }
-        return p_vts_log_transactions
+        return p_log_transactions
     }
 
 }

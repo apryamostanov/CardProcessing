@@ -1,0 +1,2747 @@
+--------------------------------------------------------------------------------
+VTS Exported Log View - Sesha_VTS Scripts_Set 1_17 Feb Selected : 40 messages exported on 14:05 02/22 2017
+
+Transaction Date & Time : 02/22/2017 13:59:08
+
+Case        : 1. ATM Cash - EMV
+Message 00  : VSDC ATM Cash Withdrawal 0210 In Rsp - 3
+Description : 0210 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AF                         
+H05      Destination Station Id     ValidValue                    123456                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0210                          0210                         
+BMP      BitMap                     ValidValue                    722222810ED0C206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    010000                       
+F4       Amount Transaction         ValidValue                    000000006000                 
+F7       Transmission Date and Tim  ValidValue                    0222095906                   
+F11      System Trace Audit Number  ValidValue                    001318                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F23      Card Sequence Number       {Received, But Not Expected}  001                          
+F25      POS Condition Code         ValidValue                    02                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001318                 
+F38      Authorization Identificat  ValidValue                    725143                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    ATM01                        
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    036                          
+F50      Currency Code, Settlement  {Received, But Not Expected}  036                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A1FCF40F16ACA4D8A30309F36020029
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000317053067861319
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    317053067861319              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:59:07
+
+Case        : 1. ATM Cash - EMV
+Message 01  : VSDC ATM Cash Withdrawal 0200 Out Req - Domestic - SGD - WORKING 24Aug 
+Description : 0200 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0160
+H05      Destination Station Id          000000
+H06      Source Station Id               123456
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0200
+BMP      BitMap                          7EFE6681A8E0FA16
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 010000
+F3.1     Transaction Type                01
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000006000
+F5       Amount Settlement               000000006000
+F6       Amount Cardholder Billing       000000036000
+F7       Transmission Date and Time      0222095906
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  66000000
+F11      System Trace Audit Number       001318
+F12      Time, Local Transmission        135906
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 6011
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F23      Card Sequence Number            001
+F25      POS Condition Code              02
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001318
+F41      Card Acceptor Terminal Id       ATM01   
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      036
+F50      Currency Code, Settlement       036
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608E0E4861ED63902C89F36020029820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608E0E4861ED63902C8
+F55.9    Application Transaction Counte  9F36020029
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      25100910
+F60.1    Terminal Type                   2
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.5    Merchant Group Indicator        09
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000317053067861319
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          317053067861319
+F63      SMS Private-Use Fields          80200000020
+F63 BMP  Bitmap                          802000
+F63.1    Network Identification Code     0002
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:56:13
+
+Case        : 1. ATM Cash - EMV
+Message 02  : VSDC ATM Cash Withdrawal 0210 In Rsp - 3
+Description : 0210 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AF                         
+H05      Destination Station Id     ValidValue                    123456                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0210                          0210                         
+BMP      BitMap                     ValidValue                    722222810ED0C206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    010000                       
+F4       Amount Transaction         ValidValue                    000000005000                 
+F7       Transmission Date and Tim  ValidValue                    0222095612                   
+F11      System Trace Audit Number  ValidValue                    001316                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F23      Card Sequence Number       {Received, But Not Expected}  001                          
+F25      POS Condition Code         ValidValue                    02                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001316                 
+F38      Authorization Identificat  ValidValue                    537331                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    ATM01                        
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    124                          
+F50      Currency Code, Settlement  {Received, But Not Expected}  124                          
+F55      Chip Data                  {Received, But Not Expected}  010011910AF7C13DF2B250430630309F36020028
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000317053066121317
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    317053066121317              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:56:13
+
+Case        : 1. ATM Cash - EMV
+Message 03  : VSDC ATM Cash Withdrawal 0200 Out Req - Domestic - SGD - WORKING 24Aug 
+Description : 0200 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0160
+H05      Destination Station Id          000000
+H06      Source Station Id               123456
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0200
+BMP      BitMap                          7EFE6681A8E0FA16
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 010000
+F3.1     Transaction Type                01
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000005000
+F5       Amount Settlement               000000005000
+F6       Amount Cardholder Billing       000000025000
+F7       Transmission Date and Time      0222095612
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  65000000
+F11      System Trace Audit Number       001316
+F12      Time, Local Transmission        135612
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 6011
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F23      Card Sequence Number            001
+F25      POS Condition Code              02
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001316
+F41      Card Acceptor Terminal Id       ATM01   
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      124
+F50      Currency Code, Settlement       124
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608B15658816CF136669F36020028820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608B15658816CF13666
+F55.9    Application Transaction Counte  9F36020028
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      25100910
+F60.1    Terminal Type                   2
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.5    Merchant Group Indicator        09
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000317053066121317
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          317053066121317
+F63      SMS Private-Use Fields          80200000020
+F63 BMP  Bitmap                          802000
+F63.1    Network Identification Code     0002
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:52:56
+
+Case        : 1. ATM Cash - EMV
+Message 04  : VSDC ATM Cash Withdrawal 0210 In Rsp - 3
+Description : 0210 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AF                         
+H05      Destination Station Id     ValidValue                    123456                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0210                          0210                         
+BMP      BitMap                     ValidValue                    722222810ED0C206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    010000                       
+F4       Amount Transaction         ValidValue                    000000004000                 
+F7       Transmission Date and Tim  ValidValue                    0222095255                   
+F11      System Trace Audit Number  ValidValue                    001314                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F23      Card Sequence Number       {Received, But Not Expected}  001                          
+F25      POS Condition Code         ValidValue                    02                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001314                 
+F38      Authorization Identificat  ValidValue                    523793                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    ATM01                        
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    826                          
+F50      Currency Code, Settlement  {Received, But Not Expected}  826                          
+F55      Chip Data                  {Received, But Not Expected}  010011910AE4FBE8C9A07A46FA30309F36020027
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000317053064151315
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    317053064151315              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:52:56
+
+Case        : 1. ATM Cash - EMV
+Message 05  : VSDC ATM Cash Withdrawal 0200 Out Req - Domestic - SGD - WORKING 24Aug 
+Description : 0200 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0160
+H05      Destination Station Id          000000
+H06      Source Station Id               123456
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0200
+BMP      BitMap                          7EFE6681A8E0FA16
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 010000
+F3.1     Transaction Type                01
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000004000
+F5       Amount Settlement               000000004000
+F6       Amount Cardholder Billing       000000016000
+F7       Transmission Date and Time      0222095255
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  64000000
+F11      System Trace Audit Number       001314
+F12      Time, Local Transmission        135255
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 6011
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F23      Card Sequence Number            001
+F25      POS Condition Code              02
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001314
+F41      Card Acceptor Terminal Id       ATM01   
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      826
+F50      Currency Code, Settlement       826
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608AB1887E8BB1FADA49F36020027820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608AB1887E8BB1FADA4
+F55.9    Application Transaction Counte  9F36020027
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      25100910
+F60.1    Terminal Type                   2
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.5    Merchant Group Indicator        09
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000317053064151315
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          317053064151315
+F63      SMS Private-Use Fields          80200000020
+F63 BMP  Bitmap                          802000
+F63.1    Network Identification Code     0002
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:48:37
+
+Case        : 1. ATM Cash - EMV
+Message 06  : VSDC ATM Cash Withdrawal 0210 In Rsp - 3
+Description : 0210 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AF                         
+H05      Destination Station Id     ValidValue                    123456                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0210                          0210                         
+BMP      BitMap                     ValidValue                    722222810ED0C206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    010000                       
+F4       Amount Transaction         ValidValue                    000000003000                 
+F7       Transmission Date and Tim  ValidValue                    0222094836                   
+F11      System Trace Audit Number  ValidValue                    001312                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F23      Card Sequence Number       {Received, But Not Expected}  001                          
+F25      POS Condition Code         ValidValue                    02                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001312                 
+F38      Authorization Identificat  ValidValue                    979039                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    ATM01                        
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    978                          
+F50      Currency Code, Settlement  {Received, But Not Expected}  978                          
+F55      Chip Data                  {Received, But Not Expected}  010011910AF5A99BB90B1ED50A30309F36020026
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000317053061561313
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    317053061561313              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:48:37
+
+Case        : 1. ATM Cash - EMV
+Message 07  : VSDC ATM Cash Withdrawal 0200 Out Req - Domestic - SGD - WORKING 24Aug 
+Description : 0200 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0160
+H05      Destination Station Id          000000
+H06      Source Station Id               123456
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0200
+BMP      BitMap                          7EFE6681A8E0FA16
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 010000
+F3.1     Transaction Type                01
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000003000
+F5       Amount Settlement               000000003000
+F6       Amount Cardholder Billing       000000009000
+F7       Transmission Date and Time      0222094836
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  63000000
+F11      System Trace Audit Number       001312
+F12      Time, Local Transmission        134836
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 6011
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F23      Card Sequence Number            001
+F25      POS Condition Code              02
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001312
+F41      Card Acceptor Terminal Id       ATM01   
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      978
+F50      Currency Code, Settlement       978
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F26081A03B85EC6CFE6049F36020026820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F26081A03B85EC6CFE604
+F55.9    Application Transaction Counte  9F36020026
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      25100910
+F60.1    Terminal Type                   2
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.5    Merchant Group Indicator        09
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000317053061561313
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          317053061561313
+F63      SMS Private-Use Fields          80200000020
+F63 BMP  Bitmap                          802000
+F63.1    Network Identification Code     0002
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:44:36
+
+Case        : 1. ATM Cash - EMV
+Message 08  : VSDC ATM Cash Withdrawal 0210 In Rsp - 3
+Description : 0210 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AF                         
+H05      Destination Station Id     ValidValue                    123456                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0210                          0210                         
+BMP      BitMap                     ValidValue                    722222810ED0C206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    010000                       
+F4       Amount Transaction         ValidValue                    000000000100                 
+F7       Transmission Date and Tim  ValidValue                    0222094435                   
+F11      System Trace Audit Number  ValidValue                    001310                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F23      Card Sequence Number       {Received, But Not Expected}  001                          
+F25      POS Condition Code         ValidValue                    02                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001310                 
+F38      Authorization Identificat  ValidValue                    503989                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    ATM01                        
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    840                          
+F50      Currency Code, Settlement  {Received, But Not Expected}  840                          
+F55      Chip Data                  {Received, But Not Expected}  010011910AD34747B5F5D8349C30309F36020025
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000317053059151311
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    317053059151311              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:44:36
+
+Case        : 1. ATM Cash - EMV
+Message 09  : VSDC ATM Cash Withdrawal 0200 Out Req - Domestic - SGD - WORKING 24Aug 
+Description : 0200 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0160
+H05      Destination Station Id          000000
+H06      Source Station Id               123456
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0200
+BMP      BitMap                          7EFE6681A8E0FA16
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 010000
+F3.1     Transaction Type                01
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000100
+F5       Amount Settlement               000000000100
+F6       Amount Cardholder Billing       000000000100
+F7       Transmission Date and Time      0222094435
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  61000000
+F11      System Trace Audit Number       001310
+F12      Time, Local Transmission        134435
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 6011
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F23      Card Sequence Number            001
+F25      POS Condition Code              02
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001310
+F41      Card Acceptor Terminal Id       ATM01   
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      840
+F50      Currency Code, Settlement       840
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608301E27DC3F97107A9F36020025820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608301E27DC3F97107A
+F55.9    Application Transaction Counte  9F36020025
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      25100910
+F60.1    Terminal Type                   2
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.5    Merchant Group Indicator        09
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000317053059151311
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          317053059151311
+F63      SMS Private-Use Fields          80200000020
+F63 BMP  Bitmap                          802000
+F63.1    Network Identification Code     0002
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:40:24
+
+Case        : 1. ATM Cash - EMV
+Message 10  : VSDC ATM Cash Withdrawal 0210 In Rsp - 3
+Description : 0210 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AF                         
+H05      Destination Station Id     ValidValue                    123456                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0210                          0210                         
+BMP      BitMap                     ValidValue                    722222810ED0C206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    010000                       
+F4       Amount Transaction         ValidValue                    000000000100                 
+F7       Transmission Date and Tim  ValidValue                    0222094024                   
+F11      System Trace Audit Number  ValidValue                    001308                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F23      Card Sequence Number       {Received, But Not Expected}  001                          
+F25      POS Condition Code         ValidValue                    02                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001308                 
+F38      Authorization Identificat  ValidValue                    614085                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    ATM01                        
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    392                          
+F50      Currency Code, Settlement  {Received, But Not Expected}  392                          
+F55      Chip Data                  {Received, But Not Expected}  010011910AB7B694DBD01DBC0D30309F36020024
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000317053056641309
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    317053056641309              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:40:24
+
+Case        : 1. ATM Cash - EMV
+Message 11  : VSDC ATM Cash Withdrawal 0200 Out Req - Domestic - SGD - WORKING 24Aug 
+Description : 0200 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0160
+H05      Destination Station Id          000000
+H06      Source Station Id               123456
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0200
+BMP      BitMap                          7EFE6681A8E0FA16
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 010000
+F3.1     Transaction Type                01
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000100
+F5       Amount Settlement               000000000100
+F6       Amount Cardholder Billing       000000000200
+F7       Transmission Date and Time      0222094024
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  62000000
+F11      System Trace Audit Number       001308
+F12      Time, Local Transmission        134024
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 6011
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F23      Card Sequence Number            001
+F25      POS Condition Code              02
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001308
+F41      Card Acceptor Terminal Id       ATM01   
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      392
+F50      Currency Code, Settlement       392
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608415AA6A73920B9759F36020024820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608415AA6A73920B975
+F55.9    Application Transaction Counte  9F36020024
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      25100910
+F60.1    Terminal Type                   2
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.5    Merchant Group Indicator        09
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000317053056641309
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          317053056641309
+F63      SMS Private-Use Fields          80200000020
+F63 BMP  Bitmap                          802000
+F63.1    Network Identification Code     0002
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:30:23
+
+Case        : Pre-Auth & Completion
+Message 12  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222093023                    0222093023                   
+F11      System Trace Audit Number  ValidValue                    001307                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001305                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F36020023             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:30:23
+
+Case        : Pre-Auth & Completion
+Message 13  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000444
+F5       Amount Settlement               000000000444
+F6       Amount Cardholder Billing       000000002664
+F7       Transmission Date and Time      0222093023
+F9       Conversion Rate, Settlement     66000000
+F10      Conversion Rate, Cardholder Bi  66000000
+F11      System Trace Audit Number       001307
+F12      Time, Local Transmission        133023
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705309001305
+F38      Authorization Identification R  361175
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      036
+F50      Currency Code, Settlement       036
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F26085DCCB714701260039F36020023820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F26085DCCB71470126003
+F55.9    Application Transaction Counte  9F36020023
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:29:23
+
+Case        : Pre-Auth & Completion
+Message 14  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000000444                 
+F7       Transmission Date and Tim  0222092922                    0222092922                   
+F11      System Trace Audit Number  ValidValue                    001305                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001305                 
+F38      Authorization Identificat  ValidValue                    361175                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    036                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A989AA40730163E2F30309F36020023
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053050021306
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053050021306              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:29:23
+
+Case        : Pre-Auth & Completion
+Message 15  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000444
+F6       Amount Cardholder Billing       000000002664
+F7       Transmission Date and Time      0222092922
+F10      Conversion Rate, Cardholder Bi  66000000
+F11      System Trace Audit Number       001305
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001305
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      036
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F26085DCCB714701260039F36020023820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F26085DCCB71470126003
+F55.9    Application Transaction Counte  9F36020023
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053050021306
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053050021306
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:21:54
+
+Case        : Pre-Auth & Completion
+Message 16  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222092153                    0222092153                   
+F11      System Trace Audit Number  ValidValue                    001304                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001302                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F36020022             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:21:53
+
+Case        : Pre-Auth & Completion
+Message 17  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000003333
+F5       Amount Settlement               000000003333
+F6       Amount Cardholder Billing       000000001999
+F7       Transmission Date and Time      0222092153
+F9       Conversion Rate, Settlement     66000000
+F10      Conversion Rate, Cardholder Bi  66000000
+F11      System Trace Audit Number       001304
+F12      Time, Local Transmission        132153
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705309001302
+F38      Authorization Identification R  395211
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      512
+F50      Currency Code, Settlement       512
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608438D640EEE5FB77D9F36020022820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F2608438D640EEE5FB77D
+F55.9    Application Transaction Counte  9F36020022
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:20:53
+
+Case        : Pre-Auth & Completion
+Message 18  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000003333                 
+F7       Transmission Date and Tim  0222092052                    0222092052                   
+F11      System Trace Audit Number  ValidValue                    001302                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001302                 
+F38      Authorization Identificat  ValidValue                    395211                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    512                          
+F55      Chip Data                  {Received, But Not Expected}  010011910AE8C8B9F4FDA907BC30309F36020022
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053044921303
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053044921303              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:20:53
+
+Case        : Pre-Auth & Completion
+Message 19  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000003333
+F6       Amount Cardholder Billing       000000001999
+F7       Transmission Date and Time      0222092052
+F10      Conversion Rate, Cardholder Bi  66000000
+F11      System Trace Audit Number       001302
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001302
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      512
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608438D640EEE5FB77D9F36020022820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608438D640EEE5FB77D
+F55.9    Application Transaction Counte  9F36020022
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053044921303
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053044921303
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:15:32
+
+Case        : Pre-Auth & Completion
+Message 20  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222091531                    0222091531                   
+F11      System Trace Audit Number  ValidValue                    001301                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001299                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F36020021             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:15:32
+
+Case        : Pre-Auth & Completion
+Message 21  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000222
+F5       Amount Settlement               000000000222
+F6       Amount Cardholder Billing       000000001110
+F7       Transmission Date and Time      0222091531
+F9       Conversion Rate, Settlement     65000000
+F10      Conversion Rate, Cardholder Bi  65000000
+F11      System Trace Audit Number       001301
+F12      Time, Local Transmission        131531
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705309001299
+F38      Authorization Identification R  352781
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      124
+F50      Currency Code, Settlement       124
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608CDA1F901371E98C59F36020021820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F2608CDA1F901371E98C5
+F55.9    Application Transaction Counte  9F36020021
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:14:31
+
+Case        : Pre-Auth & Completion
+Message 22  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000000222                 
+F7       Transmission Date and Tim  0222091430                    0222091430                   
+F11      System Trace Audit Number  ValidValue                    001299                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001299                 
+F38      Authorization Identificat  ValidValue                    352781                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    124                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A93DA8D31A42A5ABA30309F36020021
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053041101300
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053041101300              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:14:31
+
+Case        : Pre-Auth & Completion
+Message 23  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000222
+F6       Amount Cardholder Billing       000000001110
+F7       Transmission Date and Time      0222091430
+F10      Conversion Rate, Cardholder Bi  65000000
+F11      System Trace Audit Number       001299
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001299
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      124
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608CDA1F901371E98C59F36020021820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608CDA1F901371E98C5
+F55.9    Application Transaction Counte  9F36020021
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053041101300
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053041101300
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:09:47
+
+Case        : Pre-Auth & Completion
+Message 24  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222090947                    0222090947                   
+F11      System Trace Audit Number  ValidValue                    001298                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001296                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F36020020             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:09:47
+
+Case        : Pre-Auth & Completion
+Message 25  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000111
+F5       Amount Settlement               000000000111
+F6       Amount Cardholder Billing       000000000444
+F7       Transmission Date and Time      0222090947
+F9       Conversion Rate, Settlement     64000000
+F10      Conversion Rate, Cardholder Bi  64000000
+F11      System Trace Audit Number       001298
+F12      Time, Local Transmission        130947
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705309001296
+F38      Authorization Identification R  591122
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      826
+F50      Currency Code, Settlement       826
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608A4E0A61130EA6D1F9F36020020820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F2608A4E0A61130EA6D1F
+F55.9    Application Transaction Counte  9F36020020
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:08:47
+
+Case        : Pre-Auth & Completion
+Message 26  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000000111                 
+F7       Transmission Date and Tim  0222090846                    0222090846                   
+F11      System Trace Audit Number  ValidValue                    001296                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001296                 
+F38      Authorization Identificat  ValidValue                    591122                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    826                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A95222F2916985ECF30309F36020020
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053037661297
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053037661297              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:08:47
+
+Case        : Pre-Auth & Completion
+Message 27  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000111
+F6       Amount Cardholder Billing       000000000444
+F7       Transmission Date and Time      0222090846
+F10      Conversion Rate, Cardholder Bi  64000000
+F11      System Trace Audit Number       001296
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001296
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      826
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608A4E0A61130EA6D1F9F36020020820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608A4E0A61130EA6D1F
+F55.9    Application Transaction Counte  9F36020020
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053037661297
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053037661297
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:02:43
+
+Case        : Pre-Auth & Completion
+Message 28  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222090242                    0222090242                   
+F11      System Trace Audit Number  ValidValue                    001295                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001293                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F3602001F             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:02:43
+
+Case        : Pre-Auth & Completion
+Message 29  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000002222
+F5       Amount Settlement               000000002222
+F6       Amount Cardholder Billing       000000006666
+F7       Transmission Date and Time      0222090242
+F9       Conversion Rate, Settlement     63000000
+F10      Conversion Rate, Cardholder Bi  63000000
+F11      System Trace Audit Number       001295
+F12      Time, Local Transmission        130242
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705309001293
+F38      Authorization Identification R  142535
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      978
+F50      Currency Code, Settlement       978
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608D50CACE874E793969F3602001F820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F2608D50CACE874E79396
+F55.9    Application Transaction Counte  9F3602001F
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:01:43
+
+Case        : Pre-Auth & Completion
+Message 30  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000002222                 
+F7       Transmission Date and Tim  0222090142                    0222090142                   
+F11      System Trace Audit Number  ValidValue                    001293                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705309001293                 
+F38      Authorization Identificat  ValidValue                    142535                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    978                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A44648928414F833930309F3602001F
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053033421294
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053033421294              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 13:01:43
+
+Case        : Pre-Auth & Completion
+Message 31  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000002222
+F6       Amount Cardholder Billing       000000006666
+F7       Transmission Date and Time      0222090142
+F10      Conversion Rate, Cardholder Bi  63000000
+F11      System Trace Audit Number       001293
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705309001293
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      978
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608D50CACE874E793969F3602001F820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608D50CACE874E79396
+F55.9    Application Transaction Counte  9F3602001F
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053033421294
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053033421294
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:56:16
+
+Case        : Pre-Auth & Completion
+Message 32  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222085616                    0222085616                   
+F11      System Trace Audit Number  ValidValue                    001292                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705308001290                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F3602001E             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:56:16
+
+Case        : Pre-Auth & Completion
+Message 33  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000001111
+F5       Amount Settlement               000000001111
+F6       Amount Cardholder Billing       000000001111
+F7       Transmission Date and Time      0222085616
+F9       Conversion Rate, Settlement     61000000
+F10      Conversion Rate, Cardholder Bi  61000000
+F11      System Trace Audit Number       001292
+F12      Time, Local Transmission        125616
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705308001290
+F38      Authorization Identification R  557337
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      840
+F50      Currency Code, Settlement       840
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608DA8780502BF0389B9F3602001E820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F2608DA8780502BF0389B
+F55.9    Application Transaction Counte  9F3602001E
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:55:16
+
+Case        : Pre-Auth & Completion
+Message 34  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000001111                 
+F7       Transmission Date and Tim  0222085515                    0222085515                   
+F11      System Trace Audit Number  ValidValue                    001290                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705308001290                 
+F38      Authorization Identificat  ValidValue                    557337                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    840                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A63F69A0DD68249F930309F3602001E
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053061951291
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053061951291              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:55:16
+
+Case        : Pre-Auth & Completion
+Message 35  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000001111
+F6       Amount Cardholder Billing       000000001111
+F7       Transmission Date and Time      0222085515
+F10      Conversion Rate, Cardholder Bi  61000000
+F11      System Trace Audit Number       001290
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705308001290
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      840
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608DA8780502BF0389B9F3602001E820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608DA8780502BF0389B
+F55.9    Application Transaction Counte  9F3602001E
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053061951291
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053061951291
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:47:24
+
+Case        : Pre-Auth & Completion
+Message 36  : VSDC POS Acquirer Advice 0230 In Rsp
+Description : 0230 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    0074                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0230                          0230                         
+BMP      BitMap                     ValidValue                    622220810AC00202             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F7       Transmission Date and Tim  0222084723                    0222084723                   
+F11      System Trace Audit Number  ValidValue                    001289                       
+F15      Date, Settlement           ValidValue                    0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705308001287                 
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    12345678                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F55      Chip Data                  {Received, But Not Expected}  0100059F3602001D             
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:47:24
+
+Case        : Pre-Auth & Completion
+Message 37  : VSDC POS Acquirer Advice 0220 Out Req
+Description : 0220 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            0146
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0220
+BMP      BitMap                          7EFE64818CE0E216
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000111
+F5       Amount Settlement               000000000111
+F6       Amount Cardholder Billing       000000022200
+F7       Transmission Date and Time      0222084723
+F9       Conversion Rate, Settlement     62000000
+F10      Conversion Rate, Cardholder Bi  62000000
+F11      System Trace Audit Number       001289
+F12      Time, Local Transmission        124723
+F13      Date, Local Transmission        0222
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F37      Retrieval Reference Number      705308001287
+F38      Authorization Identification R  199707
+F41      Card Acceptor Terminal Id       12345678
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      392
+F50      Currency Code, Settlement       392
+F51      Currency Code, Cardholder Bill  840
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608F66F52A7479EC43C9F3602001D820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    ICC Data Segment                9F100706010A03A08800
+F55.8    Cryptogram                      9F2608F66F52A7479EC43C
+F55.9    Application Transaction Counte  9F3602001D
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F62      Custom Payment Service Fields   8000000000000000A
+F62 BMP  Bitmap                          8000000000000000
+F62.1    Authorization Characteristics   A
+F63      SMS Private-Use Fields          A52000000221050000000123456780
+F63 BMP  Bitmap                          A52000
+F63.1    Network Identification Code     0002
+F63.3    Message Reason Code             2105
+F63.6    Chargeback Reduction/BASE II F  0000000
+F63.8    Visa Acquirer's Business ID     12345678
+F63.11   Reimbursement Attribute         0
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:46:23
+
+Case        : Pre-Auth & Completion
+Message 38  : Credit VSDC POS Orig Auth 0110 In Rsp -  - 2
+Description : 0110 ISO Message, INCOMING. Match found
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                       EXPECTED VALUE                ACTUAL VALUE                 
+H01      Header Length              ValidValue                    16                           
+H02      Header Flag and Format     01                            01                           
+H03      Text Format                02                            02                           
+H04      Total Message Length       ValidValue                    00AB                         
+H05      Destination Station Id     ValidValue                    000000                       
+H06      Source Station Id          ValidValue                    000000                       
+H07      Round Trip Control Inform  ValidValue                    00                           
+H08      BASE I Flags               ValidValue                    0000                         
+H09      Message Status Flags       ValidValue                    000000                       
+H10      Batch Number               ValidValue                    00                           
+H11      Reserved                   ValidValue                    000000                       
+H12      User Information           ValidValue                    00                           
+MTI      Message Type Indicator     0110                          0110                         
+BMP      BitMap                     ValidValue                    722220810ED08206             
+F2       Primary Account Number     ValidValue                    4746460000026671             
+F3       Processing Code            ValidValue                    000000                       
+F4       Amount Transaction         ValidValue                    000000000111                 
+F7       Transmission Date and Tim  0222084623                    0222084623                   
+F11      System Trace Audit Number  ValidValue                    001287                       
+F15      Date, Settlement           {Received, But Not Expected}  0222                         
+F19      Acquiring Institution Cou  ValidValue                    840                          
+F25      POS Condition Code         ValidValue                    00                           
+F32      Acquiring Institution ID   ValidValue                    12345678901                  
+F37      Retrieval Reference Numbe  ValidValue                    705308001287                 
+F38      Authorization Identificat  ValidValue                    199707                       
+F39      Response Code              ValidValue                    00                           
+F41      Card Acceptor Terminal Id  ValidValue                    TERMID01                     
+F42      Card Acceptor Id Code      ValidValue                    CARD ACCEPTOR                
+F44      Additional Response Data   ValidValue                        2   2                    
+F49      Currency Code, Transactio  ValidValue                    392                          
+F55      Chip Data                  {Received, But Not Expected}  010011910A47969CB3C297085C30309F3602001D
+F62      Custom Payment Service Fi  SubfieldLevel                 4000000000000000017053056631288
+F62 BMP  Bitmap                     ValidValue                    4000000000000000             
+F62.2    Transaction Identifier     ValidValue                    017053056631288              
+F63      SMS Private-Use Fields     SubfieldLevel                 8000000002                   
+F63 BMP  Bitmap                     ValidValue                    800000                       
+F63.1    Network Identification Co  ValidValue                    0002                         
+--------------------------------------------------------------------------------
+Transaction Date & Time : 02/22/2017 12:46:23
+
+Case        : Pre-Auth & Completion
+Message 39  : Credit VSDC POS Orig Auth 0100 Out Req -TC05-01 - 2
+Description : 0100 ISO Message, OUTGOING. Sending out.
+--------------------------------------------------------------------------------
+
+FLD ID   NAME                            VALUE
+H01      Header Length                   16
+H02      Header Flag and Format          01
+H03      Text Format                     02
+H04      Total Message Length            015E
+H05      Destination Station Id          000000
+H06      Source Station Id               000000
+H07      Round Trip Control Information  00
+H08      BASE I Flags                    0000
+H09      Message Status Flags            000000
+H10      Batch Number                    00
+H11      Reserved                        000000
+H12      User Information                00
+MTI      Message Type Indicator          0100
+BMP      BitMap                          F6666481A8E0BA1680000000000000000000800000000000
+F2       Primary Account Number          4746460000026671
+F3       Processing Code                 000000
+F3.1     Transaction Type                00
+F3.2     Account Type From               00
+F3.3     Account Type To                 00
+F4       Amount Transaction              000000000111
+F6       Amount Cardholder Billing       000000022200
+F7       Transmission Date and Time      0222084623
+F10      Conversion Rate, Cardholder Bi  62000000
+F11      System Trace Audit Number       001287
+F14      Expiration Date                 2202
+F15      Date, Settlement                0222
+F18      Merchant's Type                 5999
+F19      Acquiring Institution Country   840
+F22      POS Entry Mode Code             0510
+F22.1    PAN/Date Entry Mode             05
+F22.2    PIN Entry Capability            1
+F22.3    Filler                          0
+F25      POS Condition Code              00
+F32      Acquiring Institution ID        12345678901
+F33      Forwarding Institution ID       12345678901
+F35      Track 2 Data                    4746460000026671D22022010914069500001
+F37      Retrieval Reference Number      705308001287
+F41      Card Acceptor Terminal Id       TERMID01
+F42      Card Acceptor Id Code           CARD ACCEPTOR  
+F43      Card Acceptor Name/Location     ACQUIRER NAME            CITY NAME    US
+F43.1    Card Acceptor Name/ATM Locatio  ACQUIRER NAME            
+F43.2    City Name/Visa Direct           CITY NAME    
+F43.3    Country Code                    US
+F49      Currency Code, Transaction      392
+F51      Currency Code, Cardholder Bill  840
+F52      PIN Data                        6671
+F53      Security Related Control Infor  2001010100000000
+F53.1    Security Format                 20
+F53.2    Algorithm ID                    01
+F53.3    PIN Block Format                01
+F53.4    Zone Key                        01
+F53.5    PIN Data Type                   00
+F53.6    Visa Reserved                   000000
+F55      Chip Data                       01005C9F3303204000950580000100009F37049BADBCAB9F100706010A03A088009F2608F66F52A7479EC43C9F3602001D820200009C01009F1A0208409A030101019F02060000000123005F2A0208409F03060000000000009F3403018000
+F55.1    Dataset ID                      01
+F55.2    Dataset Length                  005C
+F55.3    Terminal Capability Profile     9F3303204000
+F55.4    Terminal Verification Results   95058000010000
+F55.5    Unpredictable Number            9F37049BADBCAB
+F55.7    Issuer Application Data (IAD)   9F100706010A03A08800
+F55.8    Cryptogram                      9F2608F66F52A7479EC43C
+F55.9    Application Transaction Counte  9F3602001D
+F55.10   Application Interchange Profil  82020000
+F55.11   Cryptogram Transaction Type     9C0100
+F55.12   Terminal Country Code           9F1A020840
+F55.13   Terminal Transaction Date (YYM  9A03010101
+F55.14   Cryptogram Amount               9F0206000000012300
+F55.15   Cryptogram Currency Code        5F2A020840
+F55.16   Cryptogram Cashback Amount      9F0306000000000000
+F55.23   ICC Data Segment                9F3403018000
+F60      Additional POS Information      05100810
+F60.1    Terminal Type                   0
+F60.2    Terminal Entry Capability       5
+F60.3    Chip Condition Code             1
+F60.4    Special Condition Indicator     0
+F60.5    Merchant Group Indicator        08
+F60.6    Chip Transaction Indicator      1
+F60.7    Chip Card Authentication Relia  0
+F62      Custom Payment Service Fields   4000000000000000017053056631288
+F62 BMP  Bitmap                          4000000000000000
+F62.2    Transaction Identifier          017053056631288
+F63      SMS Private-Use Fields          8000000002
+F63 BMP  Bitmap                          800000
+F63.1    Network Identification Code     0002
+F145     Terminal Country Code           840
+--------------------------------------------------------------------------------
