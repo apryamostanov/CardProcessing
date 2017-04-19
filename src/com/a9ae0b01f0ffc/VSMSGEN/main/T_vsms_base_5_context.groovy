@@ -15,7 +15,6 @@ class T_vsms_base_5_context extends T_vsms_base_4_const{
 
     static void init_custom(String i_commons_conf_file_name) {
         p_context_thread_local.get().p_commons = new T_vsms_conf(i_commons_conf_file_name)
-        T_common_base_2_context.init_custom(i_commons_conf_file_name)
         T_logging_base_5_context.init_custom(c().GC_BLACK_BOX_CONFIG)
     }
 

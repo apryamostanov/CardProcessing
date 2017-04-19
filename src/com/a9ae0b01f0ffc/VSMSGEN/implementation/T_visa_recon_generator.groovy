@@ -3,6 +3,7 @@ package com.a9ae0b01f0ffc.VSMSGEN.implementation
 import com.a9ae0b01f0ffc.VSMSGEN.main.T_vsms_base_6_util
 import com.a9ae0b01f0ffc.black_box.annotations.I_black_box
 import com.a9ae0b01f0ffc.black_box.annotations.I_fix_variable_scopes
+import com.a9ae0b01f0ffc.commons.implementation.config.T_common_conf
 import groovy.transform.ToString
 
 import static com.a9ae0b01f0ffc.VSMSGEN.conf.T_vsms_conf.GC_VSMS_RECON_VERSION
@@ -121,9 +122,9 @@ class T_visa_recon_generator extends T_vsms_base_6_util {
     @I_black_box
     void convert_sim_log_to_ctf(String i_sim_log_file_name, String i_ctf_file_name, String i_source_name) {
         l().log_info(s.Welcome_to_Visa_VIP_Full_Service_Recon_File_Generator)
-        l().log_info(s.This_tool_converts_VTS_log_file_to_CTF_TC33_V222xx_reports)
+        l().log_info(s.This_tool_converts_Z1_log_file_to_CTF_TC33_V222xx_reports, i_source_name)
         l().log_info(s.Version_Z1, GC_VSMS_RECON_VERSION)
-        p_file_writer = init_file(i_ctf_file_name)
+        p_file_writer = init_file(i_ctf_file_name, (T_common_conf)c())
         ArrayList<T_sim_log_transaction> l_sim_log_transactions
 
 

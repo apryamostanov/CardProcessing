@@ -137,4 +137,14 @@ class T_tests {
 
     }
 
+    @Test
+    void test_012() {
+        T_vsms_base_5_context.get_context().init_custom(PC_CONFIG_FILE_NAME)
+        T_visa_recon_generator l_visa_recon_generator = new T_visa_recon_generator()
+        l_visa_recon_generator.convert_sim_log_to_ctf(T_vsms_base_7_main.c().GC_FINSIM_CSV_FILE, T_vsms_base_7_main.c().GC_FINSIM_CTF_FILE, T_vsms_base_4_const.VSMSGEN_CONVERT_FINSIM)
+        T_vsms_base_6_util.l().log_info(T_vsms_base_6_util.s.Process_is_complete)
+        T_vsms_base_6_util.l().flush()
+        //T_logging_base_6_util.l().print_stats()
+    }
 }
+
