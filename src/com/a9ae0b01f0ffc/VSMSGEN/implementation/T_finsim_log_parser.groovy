@@ -59,13 +59,12 @@ class T_finsim_log_parser extends T_vsms_base_6_util {
 
     @I_black_box("error")
     void parse_available_fields(String i_line) {
-        /* Remove begin and end quotes and then split */
-        String[] l_field_map = i_line.substring(1, i_line.length() - 1).split('","')
-
-        for (String l_value : l_field_map) {
-            String l_field_name = l_value.substring(GC_FIRST_CHAR, l_value.indexOf(GC_SPACE))
-            p_sim_log_original_fields.add(normalize_field_naming("F" + l_field_name))
-            fill_expanded_fields(normalize_field_naming("F" + l_field_name))
+        for (int i = 0; i < i_line.length()-3; i++) {
+            if ( i_line.substring(i, i+3).matches("([0-9]){3}") ) {
+                String l_field_name = i_line.substring(i).substring(GC_FIRST_CHAR, i_line.substring(i).indexOf(GC_SPACE))
+                p_sim_log_original_fields.add(normalize_field_naming("F" + l_field_name))
+                fill_expanded_fields(normalize_field_naming("F" + l_field_name))
+            }
         }
 
     }
